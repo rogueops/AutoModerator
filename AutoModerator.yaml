@@ -2,7 +2,7 @@ type: any
 author:
     combined_karma: "< 10"
     account_age: "< 30 days"
-    ~name: ["ShortBytes"]
+    ~name: ["ShortBytes","SelectiveLabs"]
     satisfy_any_threshold: false
 comment: |
     Your post was removed due to low karma or account age, please level up!
@@ -29,7 +29,9 @@ action_reason: "An item was removed due to karma less than 10 or account age les
     comment: |
         Post/Link automatically removed because {{domain}} is not an approved site here.
 ---
-# Auto-approve all posts
+# Auto-approve mod posts
 type: any
+author:
+    ~name: ["ShortBytes","SelectiveLabs"]
 action: approve
-action_reason: "Auto-approve all posts and comments"
+action_reason: "Auto-approve all mod posts and comments"
